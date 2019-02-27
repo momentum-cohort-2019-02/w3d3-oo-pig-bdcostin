@@ -2,19 +2,19 @@
 
 Name: Player1
 Responsibilities: Allow user to roll the dice or hold; print scoring information
-Collaborators: <-- Dice <-- Score <-- Player2; --> Player2
+Collaborators: <-- Dice; <-- Score; <-- Player2; --> Player2
 
 Name: Player2
 Responsibilities: Decide roll or hold for Player 2; print scoring information
-Collaborators: <-- Dice <-- Score <-- Player1; --> Player1
+Collaborators: <-- Dice; <-- Score; <-- Player1; --> Player1
 
 Name: Dice
 Responsibilities: Produce a random number from 1-6 / control which players turn it is if the random number == 1.
-Collaborators: --> Score; --> Player1; --> Player2.
+Collaborators: --> Score; --> Player1; --> Player2
 
 Name: Score
 Responsibilities: Calculate round and total scores for Player 1 and Player 2; reset score if the dice yields 1.
-Collaborators: <-- Dice; --> Player1; --> Player2.
+Collaborators: <-- Dice; --> Player1; --> Player2
 
 ############################################################################################################################################
 
