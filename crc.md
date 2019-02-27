@@ -1,0 +1,99 @@
+### CRC Method ###
+
+Name: Player1
+Responsibilities: Allow user to roll the dice or hold; print scoring information
+Collaborators: <-- Dice <-- Score <-- Player2; --> Player2
+
+Name: Player2
+Responsibilities: Decide roll or hold for Player 2; print scoring information
+Collaborators: <-- Dice <-- Score <-- Player1; --> Player1
+
+Name: Dice
+Responsibilities: Produce a random number from 1-6 / control which players turn it is if the random number == 1.
+Collaborators: --> Score; --> Player1; --> Player2.
+
+Name: Score
+Responsibilities: Calculate round and total scores for Player 1 and Player 2; reset score if the dice yields 1.
+Collaborators: <-- Dice; --> Player1; --> Player2.
+
+############################################################################################################################################
+
+### Outline: ###
+
+print('''Welcome to Pig, Player 1!
+
+Player 1 total score:
+Player 2 total score:
+
+Press enter to roll or anything to hold.
+
+Player 1, it is your turn. Please press enter.
+''')
+
+
+Classes:
+
+Class 1.) Player1
+additional_turn = False
+
+while additional_turn is False:
+    + Roll dice (Dice class)
+
+    print(Your score for the round is now {round_score.Score})
+
+    user_input = input('Roll again? (Enter) '))
+    additional_turn = user_input
+
+    + print(Your total score is {total_score.Score}) ###print after round ends
+
+Class 2.) Player2 (cpu)
+    round_score = round_score.Score 
+
+while round_score < 20
+    + Roll dice (Dice class)
+    print(Player 2's score for the round is now {round_score.Score})
+
+
+    print(Player 2's total score is {total_score.Score})
+
+### hold until round_score = 20 ###
+
+Class 3.) Dice
+
+def dice_roll (self, additional_turn)
+    '''Generate a random value for the dice roll and determine whether the player desires/is eligible to roll again.'''
+
+    + list = [1, 2, 3, 4, 5, 6]
+
+    + if additional_turn == False:
+        - Generate a random number from 1-6
+        additional_turn = list.random
+        print('Roll: '{self.Number})
+    else:
+        return Player two's turn!
+
+    ###Consider if there is a better way of testing for the number 1.###
+
+    + if additional_turn == 1:
+        return Player two's turn!
+
+Class 4.) Score 
+    + round_score
+
+    + total_score
+    
+    + max_score = 100
+
+    + def win_check (total_score , max_score) - compare the total score of each player to the max_score
+
+
+############################################################################################################################################
+
+Outstanding issues: 
+    What would be the best means of switching turns?
+        Factors that affect which player's turn it is:
+            - user input (Player1)
+            - decision by cpu (Player2)
+            - number returned by dice (Dice)
+            - total score - ends game at >=100 (Score)
+    Alternative to current outline: create a turn class - feel unnecessary but would probably make my code clearer.  
