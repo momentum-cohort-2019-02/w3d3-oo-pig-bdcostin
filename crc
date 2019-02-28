@@ -1,3 +1,5 @@
+<change dice to die>
+
 ### CRC Method ###
 
 Name: Player1
@@ -77,7 +79,7 @@ def dice_roll (self, additional_turn)
     + if additional_turn == 1:
         return Player two's turn!
 
-Class 4.) Score 
+Class 4.) Score ###Move into players###
     + round_score
 
     + total_score
@@ -86,6 +88,8 @@ Class 4.) Score
 
     + def win_check (total_score , max_score) - compare the total score of each player to the max_score
 
+###Game class?###
+    Need something to kick off game.
 
 ############################################################################################################################################
 
